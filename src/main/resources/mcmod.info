@@ -1,0 +1,16 @@
+[
+{
+  "modid": "mana_ae",
+  "name": "Mana AE",
+  "description": "Mana AE",
+  "version": "1.0",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Someoneice"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

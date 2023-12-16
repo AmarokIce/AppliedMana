@@ -1,4 +1,4 @@
-package wolf.someoneice.mana_ae;
+package club.someoneice.mana_ae;
 
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -10,7 +10,7 @@ public class AEPowerBlock extends BlockContainer {
         super(Material.rock);
         this.blockHardness = 0.6F;
         this.setBlockName("ae_power_block");
-        this.setBlockTextureName("ae_power_block");
+        this.setBlockTextureName(ManaMain.MODID + ":ae_power_block");
     }
 
     @Override

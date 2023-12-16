@@ -1,4 +1,4 @@
-package wolf.someoneice.mana_ae;
+package club.someoneice.mana_ae;
 
 import mcp.mobius.waila.api.*;
 import net.minecraft.entity.player.EntityPlayer;

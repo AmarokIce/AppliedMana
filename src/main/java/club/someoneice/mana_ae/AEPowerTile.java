@@ -1,4 +1,4 @@
-package wolf.someoneice.mana_ae;
+package club.someoneice.mana_ae;
 
 import appeng.api.config.Actionable;
 import appeng.tile.networking.TileEnergyCell;

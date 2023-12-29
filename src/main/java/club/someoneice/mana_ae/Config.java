@@ -1,15 +1,21 @@
 package club.someoneice.mana_ae;
 
-import club.someoneice.pineapplepsychic.config.ConfigBeanJson;
+import club.someoneice.pineapplepsychic.api.IPineappleConfig;
+import club.someoneice.pineapplepsychic.config.ConfigBeanV2;
 
-public class Config {
+public class Config extends ConfigBeanV2 implements IPineappleConfig {
     public static int ae_power = 200;
     public static int mana_count = 100;
 
+    public Config() {
+        super("mana_ae_config");
+        this.init();
+    }
+
+    @Override
     public void init() {
-        ConfigBeanJson config = new ConfigBeanJson("mana_ae_config", null);
-        ae_power = config.getInteger("ae_power", ae_power);
-        mana_count = config.getInteger("ae_power", mana_count);
-        config.build();
+        ae_power    = this.getInteger("ae_power", ae_power);
+        mana_count  = this.getInteger("ae_power", mana_count);
+        this.build();
     }
 }

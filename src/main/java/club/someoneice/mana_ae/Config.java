@@ -15,7 +15,7 @@ public class Config extends ConfigBeanV2 implements IPineappleConfig {
     @Override
     public void init() {
         ae_power    = this.getInteger("ae_power", ae_power);
-        mana_count  = this.getInteger("ae_power", mana_count);
+        mana_count  = this.getInteger("mana_count", mana_count);
         this.build();
     }
 }

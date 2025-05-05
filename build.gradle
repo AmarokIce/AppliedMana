@@ -1,16 +1,24 @@
 buildscript {
     repositories {
+        mavenLocal()
+        mavenCentral()
         maven {
-            name = "forge https"
-            url = "https://files.minecraftforge.net/maven"
+            url = "https://jcenter.bintray.com/"
+        }
+        maven {
+            name = "forge"
+            url = "https://maven.minecraftforge.net/"
         }
         maven {
             name = "sonatype"
             url = "https://oss.sonatype.org/content/repositories/snapshots/"
         }
     }
+
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+        classpath('com.anatawa12.forge:ForgeGradle:1.2-1.1.+') {
+            changing = true
+        }
     }
 }
 
@@ -29,21 +37,18 @@ sourceCompatibility = targetCompatibility = "1.8"
 
 repositories {
     mavenLocal()
+    mavenCentral()
     maven {
         url "https://cursemaven.com"
-    }
-    maven {
-        url "http://maven.snowlyicewolf.club/"
     }
 }
 
 dependencies {
-    compile "club.someoneice.pineapplepsychic:pineapple-psychic:1.4.2"
-
-    compile "curse.maven:AppliedEnergistics-223794:2296430"
-    compile "curse.maven:Muya-530214:4364097"
-    compile "curse.maven:ManaMetalMod-531708:4957568"
-    compile "curse.maven:WAILA-73488:2230518"
+    implementation "curse.maven:pineapple-psychic-1084274:5633941"
+    implementation "curse.maven:AppliedEnergistics-223794:2296430"
+    implementation "curse.maven:Muya-530214:4364097"
+    implementation "curse.maven:ManaMetalMod-531708:4957568"
+    implementation "curse.maven:WAILA-73488:2230518"
 
     // implementation fileTree(dir: 'lib', includes: ['*.jar'])
 }

@@ -20,7 +20,7 @@ public class ManaMain {
 
     @Mod.EventHandler
     public void perInit(FMLPreInitializationEvent event) {
-        new Config().init();
+        new Config();
     }
 
     @Mod.EventHandler
